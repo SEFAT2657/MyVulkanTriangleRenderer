@@ -1220,8 +1220,8 @@ bool Vulkanloading()
         rasterizer.rasterizerDiscardEnable = VK_FALSE; // Ensure fragments are generated
         rasterizer.polygonMode = VK_POLYGON_MODE_FILL; // Fill the triangle (not wireframe)
         rasterizer.lineWidth = 1.0f; // Default line thickness
-        rasterizer.cullMode = VK_CULL_MODE_NONE; // Cull back faces (disable for two-sided rendering)
-        rasterizer.frontFace = VK_FRONT_FACE_COUNTER_CLOCKWISE; // Define vertex order
+        rasterizer.cullMode = VK_CULL_MODE_BACK_BIT; // Cull back faces (disable for two-sided rendering)
+        rasterizer.frontFace = VK_FRONT_FACE_CLOCKWISE; // Define vertex order
         rasterizer.depthBiasEnable = VK_FALSE; // No depth bias
         rasterizer.rasterizerDiscardEnable=VK_FALSE;
         //// viewport and scissor
